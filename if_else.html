@@ -5,7 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        const rate = parseInt(prompt("Enter rate: "));
+        const quantity = parseInt(prompt("Enter quality: "));
         
+        const bill = rate * quantity;
+        if (bill > 100)    
+        {
+            const discount = bill / 10;
+            const paybleAmount = bill - discount;
+            document.write(`Rate of product: ${rate} <br/>`);
+            document.write(`Quantity of product: ${quantity} <br/>`)
+            document.write(`Discount: ${discount} <br/>`);
+            document.write(`Payble amount: ${paybleAmount}`);
+        } 
+        else 
+        {
+            document.write(`Rate of product: ${rate} <br/>`);
+            document.write(`Quantity of product: ${quantity} <br/>`);
+            document.write("No discount <br/>");
+            
+            document.write(`Payble amount: ${bill}`);
+        }
     </script>
 </head>
 <body>
